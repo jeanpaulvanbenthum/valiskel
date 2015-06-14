@@ -1,4 +1,4 @@
-<?php namespace Ilyes512\Valiskel\Validators;
+<?php namespace Ilyes512\Valiskel;
 
 interface ValidableInterface
 {
