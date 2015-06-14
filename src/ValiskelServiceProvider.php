@@ -8,8 +8,8 @@ class ValiskelServiceProvider extends ServiceProvider
     public function boot()
     {
         // Validation messages
-        $this->app->bind('App\Services\Validators\Messages\MessagesInterface',
-            'App\Services\Validators\Messages\MessageBag');
+        $this->app->bind('Ilyes512\Valiskel\Messages\MessagesInterface',
+            'Ilyes512\Valiskel\Messages\MessageBag');
     }
 
     public function register()
