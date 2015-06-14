@@ -1,7 +1,5 @@
 <?php namespace Ilyes512\Valiskel;
 
-use Ilyes512\Valiskel\AbstractValidator;
-use Ilyes512\Valiskel\ValidableInterface;
 use Illuminate\Contracts\Validation\Factory;
 use Ilyes512\Valiskel\Messages\MessagesInterface;
 use Ilyes512\Valiskel\Traits\MakeActionable;
