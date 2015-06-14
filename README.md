@@ -22,10 +22,18 @@ This packages requires PHP 5.6.* and will be used/tested with Laravel 5.1.*.
 
 ## Install
 
-Via Composer
+Via the Composer CLI:
 
 ``` bash
 $ composer require ilyes512/valiskel
+```
+
+You can also add it manually to your projects's composer.json file:
+
+``` json
+"require": {
+    "ilyes512\valiskel": "~. 0"
+}
 ```
 
 ## Usage
