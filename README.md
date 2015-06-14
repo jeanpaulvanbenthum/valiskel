@@ -22,6 +22,7 @@ This packages requires PHP 5.6.* and will be used/tested with Laravel 5.1.*.
 
 ## Install
 
+### 1. Install the packages
 Via the Composer CLI:
 
 ``` bash
@@ -34,6 +35,21 @@ You can also add it manually to your projects's composer.json file:
 "require": {
     "ilyes512\valiskel": "dev-master"
 }
+```
+
+### 2. Add the Service Provider
+Add the fallowing line to your `config/app.php` file:
+
+```php
+<?php
+
+return [
+	// ...
+	'providers' => [
+		// ...		
+		Ilyes512\Valiskel\ValiskelServiceProvider::class,
+	]
+];
 ```
 
 ## Usage
