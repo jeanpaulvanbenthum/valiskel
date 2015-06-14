@@ -32,7 +32,7 @@ You can also add it manually to your projects's composer.json file:
 
 ``` json
 "require": {
-    "ilyes512\valiskel": "~. 0"
+    "ilyes512\valiskel": "dev-master"
 }
 ```
 
