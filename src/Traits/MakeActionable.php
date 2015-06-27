@@ -23,6 +23,13 @@ trait MakeActionable
     protected $extraParams = [];
 
     /**
+     * Whether or not to apply to action rules
+     *
+     * @var bool
+     */
+    protected $action = true;
+
+    /**
      * Set the action type
      *
      * @param null $action
@@ -89,6 +96,30 @@ trait MakeActionable
                 $this->$method(...$this->extraParams);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * Apply the action rules before validation starts
+     *
+     * @return $this
+     */
+    public function withActionRules()
+    {
+        $this->action = true;
+
+        return $this;
+    }
+
+    /**
+     * Dont apply the action rules
+     *
+     * @return $this
+     */
+    public function withoutActionRules()
+    {
+        $this->action = false;
 
         return $this;
     }

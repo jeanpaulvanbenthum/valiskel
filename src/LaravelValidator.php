@@ -37,19 +37,16 @@ class LaravelValidator extends AbstractValidator implements ValidableInterface
      *
      * @param null $rules
      *
-     * @param bool $applyActionRules
-     *
      * @return bool
      */
-    public function passes($rules = null, $applyActionRules = true)
+    public function passes($rules = null)
     {
         if (!empty($rules)) {
             $this->rules = $rules;
         }
 
-        if ($applyActionRules) {
-            $this->applyActionRules(); // see MakeActionable Trait
-        }
+        // see MakeActionable Trait
+        $this->applyActionRules();
 
         $validator = $this->validator->make($this->data, $this->rules);
 
