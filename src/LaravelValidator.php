@@ -9,7 +9,12 @@ class LaravelValidator extends AbstractValidator implements ValidableInterface
 
     use MakeActionable;
 
-    protected $backupRules;
+    /**
+     * Store the default/original validation rules
+     *
+     * @var array
+     */
+    protected $defaultRules;
 
     /**
      * @param Factory           $validator
@@ -17,9 +22,9 @@ class LaravelValidator extends AbstractValidator implements ValidableInterface
      */
     public function __construct(Factory $validator, MessagesInterface $messages)
     {
-        $this->validator   = $validator;
-        $this->messages    = $messages;
-        $this->backupRules = $this->rules;
+        $this->validator    = $validator;
+        $this->messages     = $messages;
+        $this->defaultRules = $this->rules;
     }
 
     /**
@@ -109,13 +114,23 @@ class LaravelValidator extends AbstractValidator implements ValidableInterface
     }
 
     /**
-     * Resetd the rules to the initial values
+     * Return the default/original validation rules
+     *
+     * @return array
+     */
+    public function getDefaultRules()
+    {
+        return $this->defaultRules;
+    }
+
+    /**
+     * Reset the validation rules to the initial values
      *
      * @return $this
      */
     public function resetRules()
     {
-        $this->rules = $this->backupRules;
+        $this->rules = $this->defaultRules;
 
         return $this;
     }
