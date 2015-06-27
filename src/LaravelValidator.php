@@ -50,7 +50,7 @@ class LaravelValidator extends AbstractValidator implements ValidableInterface
 
         $validator = $this->validator->make($this->data, $this->rules);
 
-        if (method_exists($this, 'after')) {
+        if (method_exists($this, 'after') && $this->after) {
             $validator->after($this->after($this->data));
         }
 

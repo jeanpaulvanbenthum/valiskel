@@ -39,6 +39,13 @@ class AbstractValidator
     protected $failed = [];
 
     /**
+     * Whether or not to run the after() validation function
+     *
+     * @var bool
+     */
+    protected $after = true;
+
+    /**
      * Set data thats to be validated
      *
      * @param array $data
@@ -116,5 +123,29 @@ class AbstractValidator
     public function data()
     {
         return $this->data;
+    }
+
+    /**
+     * Run the validation with the after() function
+     *
+     * @return $this
+     */
+    public function withAfter()
+    {
+        $this->after = true;
+
+        return $this;
+    }
+
+    /**
+     * Run the validation without the after() function
+     *
+     * @return $this
+     */
+    public function withoutAfter()
+    {
+        $this->after = false;
+
+        return $this;
     }
 }
