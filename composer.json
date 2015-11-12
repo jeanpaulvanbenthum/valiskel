@@ -1,5 +1,5 @@
 {
-  "name": "ilyes512/valiskel",
+  "name": "jeanpaulvanbenthum/valiskel",
   "description": "A packages that helps you create validation services.",
   "keywords": [
     "valiskel",
@@ -7,7 +7,7 @@
     "validation",
     "validator"
   ],
-  "homepage": "https://github.com/Ilyes512/valiskel",
+  "homepage": "https://github.com/jeanpaulvanbenthum/valiskel",
   "license": "MIT",
   "authors": [
     {
